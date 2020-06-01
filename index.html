@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Animate Loading</title>
+</head>
+<style>
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+/*=================================================*/
+
+body {
+    margin: 0;
+    padding: 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #1B95E3;
+}
+
+.loading {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+}
+
+.loadings {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 5px;
+    background: #160151;
+    border: 2px solid #fff;
+    animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(25px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.loading .loadings:nth-child(2) {
+    animation-delay: .1s;
+    background: #FA2653;
+}
+
+.loading .loadings:nth-child(3) {
+    animation-delay: .2s;
+    background: #A2F918;
+}
+
+.loading .loadings:nth-child(4) {
+    animation-delay: .3s;
+    background: #F8B923;
+}
+
+.loading .loadings:nth-child(5) {
+    animation-delay: .4s;
+    background: #D21ABF;
+}
+</style>
+
+<body>
+    <div class="logo">
+        <img src="MAP-NEWSS.png" alt="">
+    </div>
+    <!-- ================================== -->
+    <div class="loading">
+        <div class="loadings"></div>
+        <div class="loadings"></div>
+        <div class="loadings"></div>
+        <div class="loadings"></div>
+        <div class="loadings"></div>
+    </div>
+</body>
+
+</html>
